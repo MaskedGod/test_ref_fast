@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from .routers.auth import auth_router
+from .routers.referral import ref_router
 
 app = FastAPI(
     title="Referral System API",
@@ -13,3 +14,4 @@ async def root():
 
 
 app.include_router(auth_router)
+app.include_router(ref_router)
